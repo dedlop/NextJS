@@ -14,6 +14,8 @@ export default function Home() {
         <Link href="/exemplo?parametro=valor">Página com parâmetro</Link>
         {/* Aula 4 - nested  routes */}
         <Link href="/produtos/categorias/roupas">Ir a categoria de Roupas</Link>
+        {/* Aula 7 - Nested layout */}
+        <Link href="/dashboard">Ir para dash</Link>
     </main>    
   );
 }
