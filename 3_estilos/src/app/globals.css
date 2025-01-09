@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 20px;
+  color: red;
+  background-color: #333;
+  padding: 20px;
+}
