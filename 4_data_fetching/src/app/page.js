@@ -8,7 +8,6 @@ export default async function Home() {
 
   return (    
       <main className="container mx-auto p-4">
-        <Link href="/todos/create">Ir para criação de todo</Link>
         <h1 className="text-2xl font-bold mb-4">Todos!</h1>
         <div className="space-y-4">
           {todos.map((todo) => (
@@ -20,7 +19,7 @@ export default async function Home() {
                 </div>
                 <div className="flex space-x-2 mt-3">
                   <Link
-                    href=""
+                    href={`/todos/${todo.id}`}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >
                     Visualizar
