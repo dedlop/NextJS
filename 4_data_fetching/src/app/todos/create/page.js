@@ -1,33 +1,32 @@
-import { db } from "@/db";
-import { redirect } from "next/navigation";
+import { addTodo } from "@/actions";
 
 // 1 - Criação form
 const TodoPage = () => {
   // formData = useState
   // 2 - Inserindo dados no banco
-  const addTodo = async(formData) => {
-    "use server";
+  // const addTodo = async(formData) => {
+  //   "use server";
 
-    console.log(formData);
+  //   console.log(formData);
 
-    const titulo = formData.get("titulo");
-    const descricao = formData.get("descricao");
-    const status = "pendente"
+  //   const titulo = formData.get("titulo");
+  //   const descricao = formData.get("descricao");
+  //   const status = "pendente"
 
-    console.log(titulo, descricao);
+  //   console.log(titulo, descricao);
 
-    const todo = await db.todo.create({
-      data: {
-        titulo,
-        descricao,
-        status,
-      },
-    });
+  //   const todo = await db.todo.create({
+  //     data: {
+  //       titulo,
+  //       descricao,
+  //       status,
+  //     },
+  //   });
 
-    console.log(todo);
+  //   console.log(todo);
 
-    redirect("/");
-  };
+  //   redirect("/");
+  // };
 
   return (
     <div className="max-w-md mx-auto mt-10">
