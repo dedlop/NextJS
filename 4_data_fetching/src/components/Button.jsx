@@ -1,8 +1,8 @@
 "use client";
 
-const Button = ({ children }) => {
+const Button = ({ children, className }) => {
   return (
-    <button>{children}</button>
+    <button className={className}>{children}</button>
   )
 }
 
