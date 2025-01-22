@@ -87,7 +87,7 @@ export async function toggleTodoStatus(formData) {
 
   const todoId = Number(formData.get("id"));
 
-  const todo = db.todo.findFirst({
+  const todo = await db.todo.findFirst({
     where: { id: todoId },
   });
 
@@ -99,7 +99,7 @@ export async function toggleTodoStatus(formData) {
 
   await db.todo.update({
     where: {
-      id: todoID
+      id: todoId
     },
     data: {
       status: novoStatus,
